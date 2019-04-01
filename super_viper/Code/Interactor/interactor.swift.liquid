@@ -1,0 +1,20 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Interactor {
+
+    weak var presenter: {{ module_info.name }}InteractorToPresenterConnectable?
+
+}
+
+
+// MARK: - From Presenter
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}PresenterToInteractorConnectable {
+
+}

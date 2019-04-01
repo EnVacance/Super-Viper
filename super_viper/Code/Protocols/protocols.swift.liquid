@@ -1,0 +1,40 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+
+// Presenter: View -> Presenter
+protocol {{ module_info.name }}ViewToPresenterConnectable: class {
+    var view      : {{ module_info.name }}PresenterToViewConnectable? { get set }
+    var interactor: {{ module_info.name }}PresenterToInteractorConnectable? { get set }
+    var wireframe : {{ module_info.name }}PresenterToWireframeConnectable? { get set }
+}
+
+// Interactor: Presenter -> Interactor
+protocol {{ module_info.name }}PresenterToInteractorConnectable: class {
+    var presenter: {{ module_info.name }}InteractorToPresenterConnectable? { get set }
+}
+
+// Presenter: Interactor -> Presenter
+protocol {{ module_info.name }}InteractorToPresenterConnectable: class {
+    var interactor: {{ module_info.name }}PresenterToInteractorConnectable? { get set }
+}
+
+// View: Presenter -> View
+protocol {{ module_info.name }}PresenterToViewConnectable: class {
+
+}
+
+
+
+// Wireframe: Presenter -> Wireframe
+protocol {{ module_info.name }}PresenterToWireframeConnectable: class {
+
+}

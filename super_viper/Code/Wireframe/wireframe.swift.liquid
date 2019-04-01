@@ -1,0 +1,29 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Wireframe: {{ module_info.name }}PresenterToWireframeConnectable {
+
+    static func createModule() -> {{ module_info.name }}ViewController {
+
+        // Create Components
+        let view = {{ module_info.name }}ViewController()
+        let presenter : {{ module_info.name }}ViewToPresenterConnectable & {{ module_info.name }}InteractorToPresenterConnectable = {{ module_info.name }}Presenter()
+        let interactor: {{ module_info.name }}PresenterToInteractorConnectable = {{ module_info.name }}Interactor()
+        let wireframe : {{ module_info.name }}PresenterToWireframeConnectable  = {{ module_info.name }}Wireframe()
+
+        // Configure Components
+        presenter.interactor = interactor
+        presenter.view = view
+        presenter.wireframe = wireframe
+
+        view.presenter = presenter
+        interactor.presenter = presenter
+
+        return view
+    }
+}

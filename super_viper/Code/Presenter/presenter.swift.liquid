@@ -1,0 +1,29 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Presenter {
+
+    weak var view : {{ module_info.name }}PresenterToViewConnectable?
+    var interactor: {{ module_info.name }}PresenterToInteractorConnectable?
+    var wireframe : {{ module_info.name }}PresenterToWireframeConnectable?
+
+}
+
+
+// MARK: - From Presenter
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewToPresenterConnectable {
+
+}
+
+
+// MARK: - From Interactor
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorToPresenterConnectable {
+
+}
