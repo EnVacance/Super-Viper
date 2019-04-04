@@ -7,11 +7,11 @@ license: MIT
 
 # The declarations for code files
 code_files:
-- {name: Protocols/Protocols.swift, path: Code/Protocols/protocols.swift.liquid}
-- {name: ViewController/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
-- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
-- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
-- {name: Wireframe/Wireframe.swift, path: Code/Wireframe/wireframe.swift.liquid}
+- {name: Protocols.swift, path: Code/Protocols/protocols.swift.liquid}
+- {name: ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+- {name: Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+- {name: Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+- {name: Wireframe.swift, path: Code/Wireframe/wireframe.swift.liquid}
 
 
 # The declarations for test files
